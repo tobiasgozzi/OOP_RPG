@@ -17,6 +17,7 @@
 		1D2DFFAF1CC5427D001A3E81 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2DFFAE1CC5427D001A3E81 /* Character.swift */; };
 		1D2DFFB11CC543E5001A3E81 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2DFFB01CC543E5001A3E81 /* Player.swift */; };
 		1D6710981CC8186B00FF1365 /* Orc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6710971CC8186B00FF1365 /* Orc.swift */; };
+		1DCD72B61CCBF87000B0A5BE /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCD72B51CCBF87000B0A5BE /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		1D2DFFAE1CC5427D001A3E81 /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		1D2DFFB01CC543E5001A3E81 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		1D6710971CC8186B00FF1365 /* Orc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Orc.swift; sourceTree = "<group>"; };
+		1DCD72B51CCBF87000B0A5BE /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				1D2DFF8C1CC541CD001A3E81 /* Info.plist */,
 				1D2DFFAE1CC5427D001A3E81 /* Character.swift */,
 				1D6710971CC8186B00FF1365 /* Orc.swift */,
+				1DCD72B51CCBF87000B0A5BE /* Game.swift */,
 				1D2DFFB01CC543E5001A3E81 /* Player.swift */,
 			);
 			path = "OOP-exercise";
@@ -266,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D2DFFB11CC543E5001A3E81 /* Player.swift in Sources */,
+				1DCD72B61CCBF87000B0A5BE /* Game.swift in Sources */,
 				1D2DFFAF1CC5427D001A3E81 /* Character.swift in Sources */,
 				1D2DFF831CC541CD001A3E81 /* ViewController.swift in Sources */,
 				1D6710981CC8186B00FF1365 /* Orc.swift in Sources */,

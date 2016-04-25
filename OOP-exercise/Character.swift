@@ -24,7 +24,12 @@ class Character {
     }
     
     var hp: Int {
-        return _hp
+        get {
+            return _hp
+        }
+        set(newValue) {
+            _hp = newValue
+        }
     }
     
     
@@ -34,4 +39,7 @@ class Character {
         _name = name
     }
     
+    func attackingPlayer() {
+        
+    }
 }
