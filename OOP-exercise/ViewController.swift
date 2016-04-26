@@ -22,6 +22,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var player2AttackLabel: UILabel!
     @IBOutlet weak var chooseOgrBtn: UIButton!
     @IBOutlet weak var chhoseSoldierBtn: UIButton!
+    @IBOutlet weak var restartGameBtn: UIButton!
     @IBOutlet weak var startingGameBtn: UIButton!
     @IBOutlet weak var MenuView: UIView!
     @IBOutlet weak var chooseCharacterLabel: UILabel!
@@ -80,29 +81,48 @@ class ViewController: UIViewController {
     }
     
     @IBAction func attackingPlayer(sender: UIButton) {
-        disableAttackBtn(sender)
         
         //playingAttackSound() //to implement
         
         if sender.tag == 1 {
-            statsLabel.text = "\(player1!.name) attacked \(player2!.name) for \(player1?.attackpower)"
+            statsLabel.text = "\(player1!.name) attacked \(player2!.name) for \(player1!.attackpower)"
             player2!.hp -= player1!.attackpower
         } else if sender.tag == 2 {
-            statsLabel.text = "\(player2!.name) attacked \(player1!.name) for \(player2?.attackpower)"
+            statsLabel.text = "\(player2!.name) attacked \(player1!.name) for \(player2!.attackpower)"
             player1!.hp -= player2!.attackpower
         }
         updatingHPLabel()
         
+        if (player1?.hp > 0) && (player2?.hp > 0) {
+            disableAttackBtn(sender)
+        }
         
         //if player reaches 0 HP - Game ending
         if player1?.hp <= 0 {
-            statsLabel.text = "Player 2 wins"
-            gameEnds()
+            playerDied(playerSurvived: 2)
         } else if player2?.hp <= 0 {
-            statsLabel.text = "Player 1 wins"
-            gameEnds()
+            playerDied(playerSurvived: 1)
         }
     }
+    
+    func playerDied(playerSurvived playerID: Int) {
+        if playerID == 1 {
+            statsLabel.text = "Player 1 wins"
+            playerRight.hidden = true
+            enemyRight.hidden = true
+        } else if playerID == 2 {
+            statsLabel.text = "Player 2 wins"
+            playerLeft.hidden = true
+            enemyLeft.hidden = true
+        }
+        restartGameBtn.hidden = false
+        
+        player2AttackLabel.hidden = true
+        player1AttackBtn.hidden = true
+        player2AttackBtn.hidden = true
+        player1AttackLabel.hidden = true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -111,7 +131,8 @@ class ViewController: UIViewController {
         
     }
     
-    func gameEnds(){
+    @IBAction func restartGame(sender: AnyObject) {
+    
         player1 = nil
         player2 = nil
         
@@ -121,7 +142,7 @@ class ViewController: UIViewController {
         playerRight.hidden = true
         enemyRight.hidden = true
         enemyLeft.hidden = true
-        
+        restartGameBtn.hidden = true
         
         startingGameBtn.hidden = true
         chooseCharacterLabel.text = "Player 1 choose character"
@@ -129,6 +150,7 @@ class ViewController: UIViewController {
         chooseOgrBtn.hidden = false
         chhoseSoldierBtn.hidden = false
     }
+    
     func disableAttackBtn(sender: UIButton) {
         let timer: NSTimer!
         

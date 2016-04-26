@@ -110,6 +110,21 @@
                                 <color key="textColor" red="1" green="0.34517592930000002" blue="0.45821787749999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNF-Sx-PNR">
+                                <rect key="frame" x="248" y="279" width="103" height="42"/>
+                                <color key="backgroundColor" red="1" green="0.99995858156791184" blue="0.97814967840229072" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="84D-8q-BY7"/>
+                                    <constraint firstAttribute="width" constant="103" id="BL1-Ch-SMB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
+                                <state key="normal" title="Replay">
+                                    <color key="titleColor" red="0.40243702129999998" green="1" blue="0.64878032789999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="restartGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7yK-n5-Pke"/>
+                                </connections>
+                            </button>
                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g3n-g6-3fZ" userLabel="Menu">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
@@ -144,13 +159,6 @@
                                             <action selector="choosingCharacter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MU8-aL-O6w"/>
                                         </connections>
                                     </button>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNF-Sx-PNR">
-                                        <rect key="frame" x="246" y="319" width="103" height="42"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
-                                        <state key="normal" title="Replay">
-                                            <color key="titleColor" red="0.40243702129999998" green="1" blue="0.64878032789999995" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                    </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zbr-DP-kkG">
                                         <rect key="frame" x="246" y="260" width="103" height="42"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
@@ -165,7 +173,6 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="zbr-DP-kkG" firstAttribute="centerX" secondItem="g3n-g6-3fZ" secondAttribute="centerX" id="2kZ-ec-IXO"/>
-                                    <constraint firstItem="dNF-Sx-PNR" firstAttribute="centerX" secondItem="g3n-g6-3fZ" secondAttribute="centerX" id="Gp3-Ea-enA"/>
                                     <constraint firstItem="ZZq-lo-wRI" firstAttribute="centerY" secondItem="qW9-pn-nu5" secondAttribute="centerY" id="Qpq-cy-Qtd"/>
                                     <constraint firstItem="qW9-pn-nu5" firstAttribute="leading" secondItem="wFw-ac-HZ7" secondAttribute="leading" id="SXP-RR-beQ"/>
                                     <constraint firstItem="ZZq-lo-wRI" firstAttribute="top" secondItem="wFw-ac-HZ7" secondAttribute="bottom" constant="46" id="aXp-gK-iOU"/>
@@ -173,7 +180,6 @@
                                     <constraint firstItem="zbr-DP-kkG" firstAttribute="top" secondItem="ZZq-lo-wRI" secondAttribute="bottom" constant="57" id="k9t-Im-O8S"/>
                                     <constraint firstItem="wFw-ac-HZ7" firstAttribute="centerX" secondItem="g3n-g6-3fZ" secondAttribute="centerX" id="kHb-fh-Fn9"/>
                                     <constraint firstItem="ZZq-lo-wRI" firstAttribute="trailing" secondItem="wFw-ac-HZ7" secondAttribute="trailing" id="r7K-Tm-AHm"/>
-                                    <constraint firstItem="dNF-Sx-PNR" firstAttribute="top" secondItem="zbr-DP-kkG" secondAttribute="bottom" constant="17" id="xPP-Nh-yaF"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -192,12 +198,14 @@
                             <constraint firstItem="n3O-8r-mHh" firstAttribute="centerX" secondItem="j5T-K5-aaz" secondAttribute="centerX" id="Fu9-yj-dDY"/>
                             <constraint firstItem="g3n-g6-3fZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="PRL-5n-FRf"/>
                             <constraint firstAttribute="trailing" secondItem="GGj-Ug-htP" secondAttribute="trailing" constant="70" id="Ptv-5R-rsh"/>
+                            <constraint firstItem="dNF-Sx-PNR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SM0-cd-oZk"/>
                             <constraint firstItem="Z1w-zQ-6Ql" firstAttribute="top" secondItem="iw9-AK-XQg" secondAttribute="bottom" constant="135" id="SgO-K7-4zg"/>
                             <constraint firstItem="lJt-2j-ykU" firstAttribute="centerX" secondItem="MSZ-sq-9Yq" secondAttribute="centerX" id="XEG-dG-37g"/>
                             <constraint firstAttribute="trailing" secondItem="Z1w-zQ-6Ql" secondAttribute="trailing" id="Y4f-qG-s4t"/>
                             <constraint firstItem="j5T-K5-aaz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="48" id="Z30-ff-hCI"/>
                             <constraint firstItem="Z1w-zQ-6Ql" firstAttribute="top" secondItem="Mfo-j4-L9b" secondAttribute="bottom" constant="135" id="ZB4-Bq-UQA"/>
                             <constraint firstItem="IXD-fp-lFB" firstAttribute="centerY" secondItem="bb8-6l-MsS" secondAttribute="centerY" id="Ze5-bX-tys"/>
+                            <constraint firstItem="dNF-Sx-PNR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ZhC-hO-6Yc"/>
                             <constraint firstItem="vRf-Vn-ez7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="58" id="ah9-Uz-0lM"/>
                             <constraint firstAttribute="trailing" secondItem="IXD-fp-lFB" secondAttribute="trailing" constant="68" id="fsM-U2-aHV"/>
                             <constraint firstAttribute="trailing" secondItem="g3n-g6-3fZ" secondAttribute="trailing" id="gd2-Ey-Yzi"/>
@@ -232,6 +240,7 @@
                         <outlet property="player2AttackLabel" destination="xGB-m5-dBE" id="jjZ-JB-7ft"/>
                         <outlet property="playerLeft" destination="vRf-Vn-ez7" id="quY-QE-gXO"/>
                         <outlet property="playerRight" destination="IXD-fp-lFB" id="Nnc-Zm-00t"/>
+                        <outlet property="restartGameBtn" destination="dNF-Sx-PNR" id="gzE-R8-I97"/>
                         <outlet property="rightHPLabel" destination="iw9-AK-XQg" id="tB6-GO-EMx"/>
                         <outlet property="startingGameBtn" destination="zbr-DP-kkG" id="Fh6-5W-gFl"/>
                         <outlet property="statsLabel" destination="lJt-2j-ykU" id="hzJ-Fy-HRg"/>

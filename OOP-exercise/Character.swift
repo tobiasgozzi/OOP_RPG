@@ -28,7 +28,11 @@ class Character {
             return _hp
         }
         set(newValue) {
-            _hp = newValue
+            if newValue > 0 {
+                _hp = newValue
+            } else {
+                _hp = 0
+            }
         }
     }
     
