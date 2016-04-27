@@ -17,6 +17,8 @@
 		1D2DFFAF1CC5427D001A3E81 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2DFFAE1CC5427D001A3E81 /* Character.swift */; };
 		1D2DFFB11CC543E5001A3E81 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2DFFB01CC543E5001A3E81 /* Player.swift */; };
 		1D6710981CC8186B00FF1365 /* Orc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6710971CC8186B00FF1365 /* Orc.swift */; };
+		1DBB1DF81CD12B32008618DE /* easier-said-than-killed.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1DBB1DF61CD12B32008618DE /* easier-said-than-killed.mp3 */; };
+		1DBB1DF91CD12B32008618DE /* Swords_Collide.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1DBB1DF71CD12B32008618DE /* Swords_Collide.mp3 */; };
 		1DCD72B61CCBF87000B0A5BE /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCD72B51CCBF87000B0A5BE /* Game.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +56,8 @@
 		1D2DFFAE1CC5427D001A3E81 /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		1D2DFFB01CC543E5001A3E81 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		1D6710971CC8186B00FF1365 /* Orc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Orc.swift; sourceTree = "<group>"; };
+		1DBB1DF61CD12B32008618DE /* easier-said-than-killed.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "easier-said-than-killed.mp3"; sourceTree = "<group>"; };
+		1DBB1DF71CD12B32008618DE /* Swords_Collide.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Swords_Collide.mp3; sourceTree = "<group>"; };
 		1DCD72B51CCBF87000B0A5BE /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,6 +114,8 @@
 				1D2DFF841CC541CD001A3E81 /* Main.storyboard */,
 				1D2DFF871CC541CD001A3E81 /* Assets.xcassets */,
 				1D2DFF891CC541CD001A3E81 /* LaunchScreen.storyboard */,
+				1DBB1DF61CD12B32008618DE /* easier-said-than-killed.mp3 */,
+				1DBB1DF71CD12B32008618DE /* Swords_Collide.mp3 */,
 				1D2DFF8C1CC541CD001A3E81 /* Info.plist */,
 				1D2DFFAE1CC5427D001A3E81 /* Character.swift */,
 				1D6710971CC8186B00FF1365 /* Orc.swift */,
@@ -242,7 +248,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D2DFF8B1CC541CD001A3E81 /* LaunchScreen.storyboard in Resources */,
+				1DBB1DF91CD12B32008618DE /* Swords_Collide.mp3 in Resources */,
 				1D2DFF881CC541CD001A3E81 /* Assets.xcassets in Resources */,
+				1DBB1DF81CD12B32008618DE /* easier-said-than-killed.mp3 in Resources */,
 				1D2DFF861CC541CD001A3E81 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

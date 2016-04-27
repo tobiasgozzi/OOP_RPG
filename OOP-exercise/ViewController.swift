@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
     var tagSelected: Int = 0
     var player1: Character?
     var player2: Character?
+    
+    var backgroundSound: AVAudioPlayer!
+    var attackSound: AVAudioPlayer!
     
     
     
@@ -78,11 +82,15 @@ class ViewController: UIViewController {
     @IBAction func startingGame(sender: AnyObject) {
         updatingHPLabel()
         MenuView.hidden = true
+        playBackgroundSound()
+        
+        
     }
     
     @IBAction func attackingPlayer(sender: UIButton) {
         
-        //playingAttackSound() //to implement
+        playAttackSound()
+        
         
         if sender.tag == 1 {
             statsLabel.text = "\(player1!.name) attacked \(player2!.name) for \(player1!.attackpower)"
@@ -115,20 +123,38 @@ class ViewController: UIViewController {
             playerLeft.hidden = true
             enemyLeft.hidden = true
         }
+        
+        stopBackgroundSound()
         restartGameBtn.hidden = false
         
         player2AttackLabel.hidden = true
         player1AttackBtn.hidden = true
         player2AttackBtn.hidden = true
         player1AttackLabel.hidden = true
+        
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //load Background-Sound
+        let pathBgSound = NSBundle.mainBundle().pathForResource("Swords_Collide", ofType: "mp3")
+        let pathAttackSound = NSBundle.mainBundle().pathForResource("easier-said-than-killed", ofType: "mp3")
+
+        let bgSoundURL = NSURL.fileURLWithPath(pathBgSound!)
+        let attackSoundURL = NSURL.fileURLWithPath(pathAttackSound!)
         
-        
+        do {
+            try attackSound = AVAudioPlayer(contentsOfURL: bgSoundURL)
+            try backgroundSound = AVAudioPlayer(contentsOfURL: attackSoundURL)
+            
+            attackSound.prepareToPlay()
+            backgroundSound.prepareToPlay()
+            
+        } catch let error as NSError {
+            print(error.debugDescription)
+        }
     }
     
     @IBAction func restartGame(sender: AnyObject) {
@@ -149,6 +175,13 @@ class ViewController: UIViewController {
         
         chooseOgrBtn.hidden = false
         chhoseSoldierBtn.hidden = false
+        
+        
+        player2AttackLabel.hidden = false
+        player1AttackBtn.hidden = false
+        player2AttackBtn.hidden = false
+        player1AttackLabel.hidden = false
+
     }
     
     func disableAttackBtn(sender: UIButton) {
@@ -190,8 +223,22 @@ class ViewController: UIViewController {
         rightHPLabel.text = String(player2!.hp)
     }
     
-
-
+    func playBackgroundSound() {
+        backgroundSound.play()
+    }
+    
+    func stopBackgroundSound() {
+        backgroundSound.stop()
+    }
+    
+    func playAttackSound() {
+        if attackSound.playing {
+            attackSound.stop()
+        }
+        attackSound.play()
+    }
+    
+    
 
 }
 
